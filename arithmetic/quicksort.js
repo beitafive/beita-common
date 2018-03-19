@@ -11,5 +11,5 @@ function quicksort(ar){
 			left.push(ar[i])
 		}
 	}
-	return sport(left).concat(cNum,sport(right))
+	return quicksort(left).concat(cNum,quicksort(right))
 } 
