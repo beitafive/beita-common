@@ -1,14 +1,14 @@
 "use strict"
 
-function quicksort(ar){
-	if(ar.length<=1)return ar;
-	let cNum = ar.splice(Math.floor(ar.length/2),1);
+function quicksort(arr){
+	if(arr.length<=1)return arr;
+	let cNum = arr.splice(Math.floor(arr.length/2),1);
 	let left = [],right = [];
-	for(var i=0;i<ar.length;i++){
-		if(ar[i] > cNum){
-			right.push(ar[i])
+	for(varr i=0;i<arr.length;i++){
+		if(arr[i] > cNum){
+			right.push(arr[i])
 		}else{
-			left.push(ar[i])
+			left.push(arr[i])
 		}
 	}
 	return quicksort(left).concat(cNum,quicksort(right))
